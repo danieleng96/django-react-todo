@@ -1,0 +1,302 @@
+/* th {
+  background-color: azure;
+} */
+html * {
+  /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+  font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+.gridpage {
+  display: grid;
+  grid-template-columns: 1fr repeat(6, minmax(auto, 10em)) 1fr;
+  /* grid-template-rows: minmax(1em, auto) 1fr auto minmax(1em, auto); */
+  grid-template-rows: 1fr 5fr 1fr;
+  background-color: rgb(178, 212, 241,0);
+}
+
+.header{
+  display:block;
+  /* height:100px; */
+  grid-column: 1/end;
+  background: linear-gradient(0.25turn,rgb(255, 191, 0) , rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(201, 134, 63, 0));
+  position: relative;
+  /* background-color: rgb(255, 255, 255, 0); */
+  margin-bottom: 10px;
+  /* border-bottom: 2px solid rgb(78, 78, 78); */
+  z-index: 10;
+
+}
+
+.header > h1 {
+  /* margin-left: 30px; */
+  color:rgb(0, 36, 68)
+;
+}
+
+.footer{
+  height:200px;
+  width:100%;
+  display:block;
+  position: relative;
+  grid-row: (end-1)/end;
+  grid-column: 1/end;
+  /* background-color: rgb(139, 139, 139); */
+  margin-top: 15px;
+  /* border-top: 2px solid rgb(78, 78, 78); */
+  overflow: hidden;
+  background: linear-gradient(0.25turn,rgb(253, 211, 106), rgba(255, 0, 0, 0), rgba(201, 134, 63, 0));
+
+}
+
+.container {
+  /* background-color: rgb(228, 238, 255); */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3px;
+  width: 100%;
+  overflow:auto;
+}
+
+.display-container {
+  background: linear-gradient(aliceblue, rgba(84, 101, 116,0));
+  border-top-right-radius: 50%;
+  overflow-x: hidden;
+  display: grid;
+  row-gap: 5px;
+  padding: 10px;
+  grid-column: 1/6;
+  grid-row: 2/4;
+  margin-right: 30px;
+}
+
+.plot-wrapper {
+  grid-column: 6/10;
+  grid-row: 2/4;
+
+  align-items: center;
+  overflow: auto;
+  max-width: 100%;
+  background: linear-gradient(rgba(84, 101, 116,0) , aliceblue);
+  border-bottom-left-radius: 50%;
+
+
+}
+
+.box-header {
+    width: 100%;
+    max-height:100px;
+    /* text-align: center; */
+    /* display: flexbox; */
+    padding-bottom: 10px;
+    padding-top: 10px;
+    overflow: hidden;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: 1fr 2fr; */
+    /* gap: 30px; */
+    gap:10px;
+    position: relative;
+    background: linear-gradient(0.25turn, rgba(0, 136, 255, 0.5) , aliceblue);
+
+    
+}
+
+input {
+  opacity:0.7;
+  padding: 3%;
+  margin: 3%;
+}
+
+input:focus {
+  opacity:1;
+}
+
+
+td {
+  border: 1px solid black;
+  padding: 0;
+  width: 15%;
+  text-align: center;
+}
+
+tr {
+  color:aliceblue;
+  background-color: rgb(32, 54, 71);
+  border: 5% solid black;
+}
+
+tr:nth-child(2n) {
+  color:rgb(0, 78, 145);
+  background-color: rgb(255, 255, 255);
+}
+
+.button {
+  /* background-color: rgb(92, 156, 206); */
+  background: linear-gradient(0.25turn, rgba(104, 185, 255, 0.5) , rgb(203, 215, 224));
+  height: 30px;
+  width: 120px;
+  /* max-height: 100%; */
+  margin: 4%;
+  opacity:1;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  text-overflow: ellipsis;
+  /* overflow-y: auto; */
+  overflow-x: hidden;
+  white-space: nowrap;
+  grid-column: 2;
+  padding: 4%;
+  border: 1px solid black;
+}
+
+.button:hover {
+  background-color: rgb(149, 182, 207);
+}
+
+.small-button {
+  text-align: center;
+}
+
+/* .check {
+  width:100%;
+  height:100%;
+  background-color: brown;
+} */
+
+
+
+.databox {
+  background: linear-gradient(rgba(253, 211, 106, 0.9), rgba(255, 162, 105, 0.25));
+  display: grid;
+  /* grid-template-areas: "header header header toggle"; */
+  /* grid-template-rows: 1fr 1fr 1fr 2fr 1fr; */
+  /* grid-template-rows: 2fr 1fr; */
+  align-items: center;
+  overflow: auto;
+  aspect-ratio: 1;
+  border-radius: 5px;
+  /* width:fit-content; */
+  border: 1px solid rgb(92, 156, 206);
+  border-bottom:3px solid rgb(92, 156, 206);
+  border-right:3px solid rgb(92, 156, 206);
+  /* border-right:3px solid rgb(92, 156, 206); */
+
+  z-index: 200;
+}
+
+/* .databox:nth-child(2n) {
+  background-color: rgb(253, 211, 106);
+} */
+
+.button-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  background-color: rgba(255, 191, 0, 0.3);
+  border-top: 2pt dotted grey;
+}
+
+.id {
+  left:0%;
+  font-weight: 300;
+  background-color: beige;
+  position:relative;
+  padding:10px;
+  grid-row-start: 1;
+  grid-column-start: 1;
+  border-radius: 3px;
+  text-align: center;
+  max-height: 30px;
+}
+
+.item {
+  margin: 10px;
+  padding: 3px;
+  width: fit-content;
+  border-radius: 3px;
+  /* border: 1pt solid rgb(196, 133, 255); */
+  background: linear-gradient(rgba(238, 198, 255, 0.1), rgba(255, 255, 255,0.3));
+}
+
+.title {
+  font-weight: 500;
+  color:rgb(16, 16, 77);
+  text-indent: 10px;
+    /* font-style: italic; */
+}
+
+.title:hover {
+  color:rgb(121, 121, 206);
+  font-style: italic;
+}
+.description {
+  margin: 5px;
+  text-indent: 15px;
+  width: 80%;
+  padding-left: 15px;
+  height:50px;
+  overflow-wrap: break-word;
+  overflow:auto;
+  border-bottom: 1pt dashed grey;
+}
+
+/* .description:hover {
+  background-color: rgb(255, 252, 243);
+  size: auto;
+} */
+
+
+
+.searchbox {
+  width:500px;
+  aspect-ratio: 2;
+  align-items: center;
+  overflow: auto;
+  /* grid-column:1/4; */
+}
+
+.searchbox > h2 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-left: 10%
+}
+
+.searchbox > input {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 5%;
+  align-content: center;
+}
+
+label {
+  margin-top: 10%;
+  margin-left: 20px;
+  margin-right: 20px;
+  align-content: center;
+  position: relative;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.databox::-webkit-scrollbar {
+  display: none;
+}
+
+.description::-webkit-scrollbar{
+  display: none;
+}
+::-webkit-scrollbar{
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.databox .description {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.databox.editing {
+  background-color: rgb(0, 186, 233);
+  /* grid-template-rows: 1fr 2fr 1fr; */
+}
+

@@ -1,0 +1,85 @@
+/* 
+/* .wrapper {
+    overflow-y: hidden; */
+.sidebar.closed {
+    /* transition-delay: 1s;
+    transition-property: margin-right; */
+    transition: transform 0.3s ease;
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: all 1s ease;
+    border-color: black;
+    /* min-height: 30px; */
+}
+
+
+/* .wrapper {
+    grid-template-columns: 200px 1fr;
+    grid-template-areas: "header header"
+                        "sidebar main"
+                        "sidebar footer";
+} */
+/* .sidebar.closed {
+    overflow: hidden;
+} */
+
+.content {
+    max-height: 500px;
+    max-width: 500px;
+
+    transition: opacity 3s ease, background-color 1s ease, max-height 1s ease-in-out, max-width 1s ease-in-out;
+    white-space: wrap;
+    overflow: hidden;
+    border-radius: 5px;
+
+}
+
+.content.closed {
+    max-height: 0px;
+    max-width: 0px;
+
+}
+
+/* .content.open { */
+    /* background-color: rgb(127, 171, 247); */
+    /* padding: 5%; */
+    /* opacity: 1; */
+    /* transform: translateY(0%); */
+    /* transition: all 1s ease; */
+/* }  */
+
+.toggle-button:hover {
+    opacity: 1;
+}
+
+  
+.toggle-button {
+    /* background-color: #c1e1a1;
+    width: 100%;
+    /* aspect-ratio: 1; */
+    /* font-size: xx-large; */
+    /* font-weight: 00; */
+    /* border-top-right-radius: 5px;
+    border-top-left-radius: 5px; */
+    width: 100%;
+    transition: border ease 1s, border-radius ease 1s;
+    /* margin: 10px; */
+}
+
+.button.open{
+    height: 0px;
+}
+
+
+
+/* .toggle-button:hover .content {
+    -webkit-transition: width 1s ease-in-out;
+    -moz-transition: width 1s ease-in-out;
+    -o-transition: width 1s ease-in-out;
+    transition: width 1s ease-in-out;
+
+    width:90%;
+} */
+
+

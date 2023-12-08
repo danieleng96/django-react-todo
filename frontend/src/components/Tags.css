@@ -1,0 +1,80 @@
+:root {
+    --border-color: rgb(9, 4, 23);
+}
+
+.tag {
+    /* border: 2px solid grey; */
+    padding: 3px;
+    width:30px;
+    height:30px;
+    aspect-ratio: 1;
+
+    
+    /* text-align: center; */
+    font-weight: 700;
+    color:rgb(94, 100, 107);
+    opacity: 0.5;
+    border-top: 1pt solid var(--border-color);
+    border-bottom: 1pt solid var(--border-color);
+
+}
+
+.tag:first-child {
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-left: 1pt solid var(--border-color);
+}
+
+.tag:last-child {
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-right: 1pt solid var(--border-color);
+
+}
+
+.tag-wrapper {
+    padding: 4px;
+    text-align: center;
+    display: flex;
+    gap:0;
+    width: 30%;
+    left:0%;
+
+    
+}
+
+.tag:hover {
+    color:rgb(255, 255, 255);
+    background: linear-gradient(rgb(2, 61, 129), rgb(139, 193, 255));
+    cursor: pointer;
+}
+
+.tag.easy {
+    background: linear-gradient(rgb(2, 129, 2), rgb(188, 255, 188));
+}
+
+.tag.medium {
+    background: linear-gradient(rgb(121, 109, 0), rgb(255, 243, 130));
+}
+
+.tag.hard {
+    background: linear-gradient(rgb(155, 0, 0), rgb(255, 160, 160));
+}
+
+.tag.selected {
+    opacity: 1;
+    max-height: 30px;
+    color:rgb(0, 11, 73);
+    border-radius: 0%;
+    border:1.5pt solid var(--border-color);
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+
+.edit > .selected {
+    color:rgb(0, 21, 88);
+}
+
+.tag.expanded {
+    border-radius: 3px;
+}
