@@ -5,7 +5,7 @@
 .pnp.js
 
 #Venv
-venvDjReact/
+venvDjReact
 
 # testing
 /coverage
